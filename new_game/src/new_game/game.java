@@ -142,6 +142,7 @@ public class game extends JPanel implements KeyListener {
 
         System.out.println("\t3");
         double time = 10; 
+       int incre=1;
         while(true){
             System.out.println(o.l_s);
             o.moveBall();
@@ -154,7 +155,7 @@ public class game extends JPanel implements KeyListener {
             System.out.println("\t"+o.l_s);
             System.out.println("**********************");
             System.out.println("\trepeat");
-            time = time -0.001;             //increases speed of ball
+            time = log(incre++)*time + time;             //increases speed of ball
         }
     }
 }
