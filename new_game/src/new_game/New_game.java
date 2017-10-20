@@ -14,7 +14,8 @@ public class New_game {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        game obj = new game();
-        obj.the_game();
+        //game obj = new game();
+        //obj.the_game();
+        new game().the_game();
     }
 }
