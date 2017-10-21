@@ -36,11 +36,7 @@ public class game extends JPanel implements KeyListener {
         System.out.println("\tpaint");
         
         super.paint(g);
-        Graphics2D gg = (Graphics2D)g;
-        gg.fillOval(x, y, 30, 30);          //draws ball(startPosOfx,stsPosOfy,horLength,verLength)
-        gg.draw3DRect(30, 20, 1300, 500, true);             //draw rectangle(same as above)
-        Line2D ln = new Line2D.Float(l_s,460,l_s+200,460);  //draw line(start_x,start_y,end_x,end_y)
-        gg.draw(ln);                                        //draws line in JFrame
+        
         System.out.println(l_s);
         System.out.println("\tpaint ends");
     }
@@ -87,6 +83,11 @@ public class game extends JPanel implements KeyListener {
             default:
                 System.out.println("in key pressed");
                 break;
+              Graphics2D gg = (Graphics2D)g;
+        gg.fillOval(x, y, 30, 30);          //draws ball(startPosOfx,stsPosOfy,horLength,verLength)
+        gg.draw3DRect(30, 20, 1300, 500, true);             //draw rectangle(same as above)
+        Line2D ln = new Line2D.Float(l_s,460,l_s+200,460);  //draw line(start_x,start_y,end_x,end_y)
+        gg.draw(ln);                                        //draws line in JFrame
         }
         System.out.println("\tkey pressed ends");
     }
@@ -97,12 +98,12 @@ public class game extends JPanel implements KeyListener {
     }
             
     public void moveBall(){
-        if(x>1300 || x<28 )
+        if(x>13 && x<28 )
             x1*=-1;                 //bounds the left most and right most limit
-        if(y<18 )
+        if(y<55 )
             y1*=-1;                 //bounds the top most limit
                 
-        if(y==430){
+        if(y<=430){
             if(x>l_s-40 && x<l_s+200){
                 y1*=-1;                 //bounce back after touching the bar
                 score++;                //score inc every time bar is encountered
