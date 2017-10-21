@@ -38,11 +38,11 @@ public class game extends JPanel implements KeyListener {
         super.paint(g);
         Graphics2D gg = (Graphics2D)g;
         gg.fillOval(x, y, 30, 30);          //draws ball(startPosOfx,stsPosOfy,horLength,verLength)
-        gg.draw3DRect(30, 20, 1300, 500, true);             //draw rectangle(same as above)
+        gg.draw3DRect(60, 30, 1200, 300, true);             //draw rectangle(same as above)
         Line2D ln = new Line2D.Float(l_s,460,l_s+200,460);  //draw line(start_x,start_y,end_x,end_y)
         gg.draw(ln);                                        //draws line in JFrame
         System.out.println(l_s);
-        System.out.println("\tpaint ends");
+        System.out.println("\tpaint completed");
     }
     
     @Override
@@ -154,7 +154,7 @@ public class game extends JPanel implements KeyListener {
             System.out.println("\t"+o.l_s);
             System.out.println("**********************");
             System.out.println("\trepeat");
-            time = time -0.001;             //increases speed of ball
+            time = time + time*log(i++);             //increases speed of ball
         }
     }
 }
