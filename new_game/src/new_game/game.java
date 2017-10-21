@@ -44,11 +44,7 @@ public class game extends JPanel implements KeyListener {
         System.out.println(l_s);
         System.out.println("\tpaint ends");
     }
-    
-    @Override
-    public void keyTyped(KeyEvent event){
-    
-    }
+
     @Override
     public void keyPressed(KeyEvent ke) {
         System.out.println("\n\tkeyPressed starts");
@@ -142,6 +138,10 @@ public class game extends JPanel implements KeyListener {
 
         System.out.println("\t3");
         double time = 10; 
+        @Override
+    public void keyReleased(KeyEvent ke) {
+        System.out.println("\n\tkeyReleased");
+    }
         while(true){
             System.out.println(o.l_s);
             o.moveBall();
