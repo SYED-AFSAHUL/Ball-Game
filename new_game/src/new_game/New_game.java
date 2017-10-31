@@ -17,4 +17,7 @@ public class New_game {
         game obj = new game();
         obj.the_game();
     }
+        public static void main(String[] args) {
+        game obj = new game();
+        obj.the_game();
 }
