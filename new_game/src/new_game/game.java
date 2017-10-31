@@ -12,9 +12,7 @@ import java.awt.event.KeyListener;
 import java.awt.geom.Line2D;
 import static java.lang.System.exit;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
+
 
 /**
  *
